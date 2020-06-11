@@ -145,7 +145,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(207, 42);
+            this.label3.Location = new System.Drawing.Point(203, 42);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(47, 17);
             this.label3.TabIndex = 13;
@@ -163,7 +163,7 @@
             // 
             // textNome
             // 
-            this.textNome.Location = new System.Drawing.Point(76, 39);
+            this.textNome.Location = new System.Drawing.Point(68, 39);
             this.textNome.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textNome.Name = "textNome";
             this.textNome.Size = new System.Drawing.Size(121, 22);
@@ -171,7 +171,7 @@
             // 
             // textEmail
             // 
-            this.textEmail.Location = new System.Drawing.Point(260, 37);
+            this.textEmail.Location = new System.Drawing.Point(256, 39);
             this.textEmail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textEmail.Name = "textEmail";
             this.textEmail.Size = new System.Drawing.Size(216, 22);
@@ -182,7 +182,7 @@
             this.textSaldo.Location = new System.Drawing.Point(584, 39);
             this.textSaldo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textSaldo.Name = "textSaldo";
-            this.textSaldo.Size = new System.Drawing.Size(100, 22);
+            this.textSaldo.Size = new System.Drawing.Size(89, 22);
             this.textSaldo.TabIndex = 3;
             // 
             // btnSave

@@ -30,7 +30,33 @@ namespace FrontEndApp
 
         private void Form7_Load(object sender, EventArgs e)
         {
+            conn = new NpgsqlConnection(connstring);
+            Select();
+        }
+        private void Select()
+        {
+            try
+            {
+                conn.Open();
+                sql = @"select d.nome,p.datapedido,p.valorpedido
+                        from pedido p inner join docente d on p.docente_id = d.id
+				                      inner join comparticipacao c on c.id_p = p.id_p;";
+                cmd = new NpgsqlCommand(sql, conn);
+                dt = new DataTable();
+                dt.Load(cmd.ExecuteReader());
 
+
+                conn.Close();
+                dgvData.DataSource = null;
+                dgvData.DataSource = dt;
+                
+            }
+            catch (Exception ex)
+            {
+                conn.Close();
+                MessageBox.Show("Erro: " + ex.Message);
+
+            }
         }
     }
 }

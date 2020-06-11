@@ -20,7 +20,8 @@ namespace FrontEndApp
 
         private void Form2_Load(object sender, EventArgs e)
         {
-
+            conn = new NpgsqlConnection(connstring);
+            Select();
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -51,6 +52,36 @@ namespace FrontEndApp
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+        private void Select()
+        {
+            try
+            {
+                conn.Open();
+                sql = @"select d.nome,p.datapedido,p.valorpedido, tp.tipo
+                        from pedido p inner join docente d on p.docente_id = d.id
+				                      inner join premio e on e.id_p = p.id_p
+				                      inner join tipopremio tp on tp.id_tp = e.id_tp;";
+                cmd = new NpgsqlCommand(sql, conn);
+                dt = new DataTable();
+                dt.Load(cmd.ExecuteReader());
+
+                conn.Close();
+                dgvData.DataSource = null;
+                dgvData.DataSource = dt;
+              
+            }
+            catch (Exception ex)
+            {
+                conn.Close();
+                MessageBox.Show("Erro: " + ex.Message);
+
+            }
         }
     }
 }

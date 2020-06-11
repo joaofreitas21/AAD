@@ -53,6 +53,10 @@ namespace FrontEndApp
                 conn.Close();
                 dgvData.DataSource = null;
                 dgvData.DataSource = dt;
+                dgvData.Columns["id"].DisplayIndex = 0;
+                dgvData.Columns["nome"].DisplayIndex = 1;
+                dgvData.Columns["email"].DisplayIndex = 2;
+                dgvData.Columns["saldoconta"].DisplayIndex = 3;
             }
             catch(Exception ex)
             {
