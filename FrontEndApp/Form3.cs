@@ -57,7 +57,8 @@ namespace FrontEndApp
                         from pedido p inner join docente d on p.docente_id = d.id
 				                      inner join premio e on e.id_p = p.id_p
 				                      inner join tipopremio tp on tp.id_tp = e.id_tp
-				                      inner join estado est on est.id_est = p.estadoid_est;";
+				                      inner join estado est on est.id_est = p.estadoid_est
+				                      where est.id_est = 1 or est.id_est = 2;";
                 cmd = new NpgsqlCommand(sql, conn);
                 dt = new DataTable();
                 dt.Load(cmd.ExecuteReader());

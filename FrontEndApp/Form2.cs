@@ -63,10 +63,12 @@ namespace FrontEndApp
             try
             {
                 conn.Open();
-                sql = @"select d.nome,p.datapedido,p.valorpedido, tp.tipo
+                sql = @"select d.nome,p.datapedido,p.valorpedido, tp.tipo, est.tipo
                         from pedido p inner join docente d on p.docente_id = d.id
 				                      inner join premio e on e.id_p = p.id_p
-				                      inner join tipopremio tp on tp.id_tp = e.id_tp;";
+				                      inner join tipopremio tp on tp.id_tp = e.id_tp
+				                      inner join estado est on est.id_est = p.estadoid_est
+				                      where est.id_est = 3";
                 cmd = new NpgsqlCommand(sql, conn);
                 dt = new DataTable();
                 dt.Load(cmd.ExecuteReader());
