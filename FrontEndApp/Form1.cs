@@ -91,14 +91,6 @@ namespace FrontEndApp
 
         }
 
-        private void button8_Click(object sender, EventArgs e)
-        {
-            openChildForm(new Form5());
-            /* meu codigo*/
-            hideSubMenu();
-
-        }
-
         private void button7_Click(object sender, EventArgs e)
         {
             openChildForm(new Form6());

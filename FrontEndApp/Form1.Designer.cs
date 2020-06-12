@@ -40,7 +40,6 @@
             this.button5 = new System.Windows.Forms.Button();
             this.panelSubMenu2 = new System.Windows.Forms.Panel();
             this.btnHE3 = new System.Windows.Forms.Button();
-            this.btnHE2 = new System.Windows.Forms.Button();
             this.btnHE1 = new System.Windows.Forms.Button();
             this.btnMedia2 = new System.Windows.Forms.Button();
             this.panelSubMenu = new System.Windows.Forms.Panel();
@@ -85,7 +84,7 @@
             this.panel2.Controls.Add(this.btnD2);
             this.panel2.Controls.Add(this.btnD1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 572);
+            this.panel2.Location = new System.Drawing.Point(0, 545);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(229, 87);
             this.panel2.TabIndex = 7;
@@ -131,7 +130,7 @@
             this.button11.FlatAppearance.BorderSize = 0;
             this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(15)))), ((int)(((byte)(23)))));
-            this.button11.Location = new System.Drawing.Point(0, 527);
+            this.button11.Location = new System.Drawing.Point(0, 500);
             this.button11.Name = "button11";
             this.button11.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.button11.Size = new System.Drawing.Size(229, 45);
@@ -147,7 +146,7 @@
             this.panel1.Controls.Add(this.btnC2);
             this.panel1.Controls.Add(this.btnC1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 440);
+            this.panel1.Location = new System.Drawing.Point(0, 413);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(229, 87);
             this.panel1.TabIndex = 5;
@@ -193,7 +192,7 @@
             this.button5.FlatAppearance.BorderSize = 0;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(15)))), ((int)(((byte)(23)))));
-            this.button5.Location = new System.Drawing.Point(0, 395);
+            this.button5.Location = new System.Drawing.Point(0, 368);
             this.button5.Name = "button5";
             this.button5.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.button5.Size = new System.Drawing.Size(229, 45);
@@ -207,13 +206,12 @@
             // 
             this.panelSubMenu2.BackColor = System.Drawing.SystemColors.ControlLight;
             this.panelSubMenu2.Controls.Add(this.btnHE3);
-            this.panelSubMenu2.Controls.Add(this.btnHE2);
             this.panelSubMenu2.Controls.Add(this.btnHE1);
             this.panelSubMenu2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelSubMenu2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(15)))), ((int)(((byte)(23)))));
             this.panelSubMenu2.Location = new System.Drawing.Point(0, 277);
             this.panelSubMenu2.Name = "panelSubMenu2";
-            this.panelSubMenu2.Size = new System.Drawing.Size(229, 118);
+            this.panelSubMenu2.Size = new System.Drawing.Size(229, 91);
             this.panelSubMenu2.TabIndex = 3;
             // 
             // btnHE3
@@ -223,32 +221,15 @@
             this.btnHE3.FlatAppearance.BorderSize = 0;
             this.btnHE3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHE3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(15)))), ((int)(((byte)(23)))));
-            this.btnHE3.Location = new System.Drawing.Point(0, 80);
+            this.btnHE3.Location = new System.Drawing.Point(0, 40);
             this.btnHE3.Name = "btnHE3";
             this.btnHE3.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnHE3.Size = new System.Drawing.Size(229, 32);
+            this.btnHE3.Size = new System.Drawing.Size(229, 46);
             this.btnHE3.TabIndex = 2;
             this.btnHE3.Text = "Adicionar";
             this.btnHE3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnHE3.UseVisualStyleBackColor = false;
             this.btnHE3.Click += new System.EventHandler(this.button7_Click);
-            // 
-            // btnHE2
-            // 
-            this.btnHE2.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.btnHE2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnHE2.FlatAppearance.BorderSize = 0;
-            this.btnHE2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHE2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(15)))), ((int)(((byte)(23)))));
-            this.btnHE2.Location = new System.Drawing.Point(0, 40);
-            this.btnHE2.Name = "btnHE2";
-            this.btnHE2.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnHE2.Size = new System.Drawing.Size(229, 40);
-            this.btnHE2.TabIndex = 1;
-            this.btnHE2.Text = "Resolvidos";
-            this.btnHE2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnHE2.UseVisualStyleBackColor = false;
-            this.btnHE2.Click += new System.EventHandler(this.button8_Click);
             // 
             // btnHE1
             // 
@@ -262,7 +243,7 @@
             this.btnHE1.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
             this.btnHE1.Size = new System.Drawing.Size(229, 40);
             this.btnHE1.TabIndex = 0;
-            this.btnHE1.Text = "Pendentes";
+            this.btnHE1.Text = "Listar";
             this.btnHE1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnHE1.UseVisualStyleBackColor = false;
             this.btnHE1.Click += new System.EventHandler(this.button9_Click);
@@ -415,7 +396,6 @@
         private System.Windows.Forms.Panel panelSideMenu;
         private System.Windows.Forms.Panel panelSubMenu2;
         private System.Windows.Forms.Button btnHE3;
-        private System.Windows.Forms.Button btnHE2;
         private System.Windows.Forms.Button btnHE1;
         private System.Windows.Forms.Button btnMedia2;
         private System.Windows.Forms.Panel panelSubMenu;

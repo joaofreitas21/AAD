@@ -25,7 +25,40 @@ namespace FrontEndApp
 
         private void Form8_Load(object sender, EventArgs e)
         {
+            conn = new NpgsqlConnection(connstring);
+            Select();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
         }
+        private void Select()
+        {
+            try
+            {
+                conn.Open();
+                sql = @"select d.nome,p.datapedido,p.valorpedido,p.dataatribuicao,p.valoratribuido,est.tipo
+                        from pedido p inner join docente d on p.docente_id = d.id
+			                          inner join comparticipacao c on c.id_p = p.id_p
+			                          inner join estado est on est.id_est = p.estadoid_est;";
+                cmd = new NpgsqlCommand(sql, conn);
+                dt = new DataTable();
+                dt.Load(cmd.ExecuteReader());
+
+
+                conn.Close();
+                dgvData.DataSource = null;
+                dgvData.DataSource = dt;
+
+            }
+            catch (Exception ex)
+            {
+                conn.Close();
+                MessageBox.Show("Erro: " + ex.Message);
+
+            }
+        }
+
     }
 }
